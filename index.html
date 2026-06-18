@@ -1,10 +1,12 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-br">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Frei | Instituto Social Nossa Senhora de Fátima</title>
     <link rel="stylesheet" href="style.css">
+    <script src="https://kit.fontawesome.com/299e83dd29.js" crossorigin="anonymous"></script>
+    <link rel="shortcut icon" href="img/icone.png" type="image/x-icon">
 </head>
 <body>
     <header>
@@ -26,23 +28,58 @@
 
 
     <div class="welcome">
-        <div class="welcome-container">
+        <button id="anterior"><i class="fa-solid fa-arrow-left fa-rotate-260" style="color: #325597;"></i></button>
+        <div class="welcome-container primeiro">
             <div class="welcome-img">
                 <img src="img/escola.png" alt="">
             </div>
             <div class="welcome-text">
-                <h2>Sejam Bem Vindos</h2>
-                <span class="text">
+                <h2>Sejam Bem Vindos!!!</h2>
+                <div class="text-welcome">
                     <p>Conheca nossos cursos</p>
                     <p>Saiba mais sobre nossa Instituição</p>
                     <p>Fique por dentro de nossas novidades e muito mais</p>
-                </span>
-                <span class="destaque">
+                </div>
+                <div class="destaque">
                     <p>Orgulho que transforma...</p>
                     <p>...esforço que permanece.</p>
-                </span>
+                </div>
             </div>
         </div>
+
+
+
+        <div class="welcome-container segundo">
+            <div class="welcome-img">
+                <img src="img/apresentacao-cv.avif" alt="">
+            </div>
+            <div class="welcome-text">
+                <h2>Projeto Identidade Visual para Redes Sociais</h2>
+                <div class="text-welcome">
+                    <p>Nossos alunos de Comunicação</p>
+                    <p>Visual fizeram um projeto cheio de criatividade!</p>
+                </div>
+                <button>Confira como foi</button>
+            </div>
+        </div>
+
+
+
+        <div class="welcome-container terceiro">
+            <div class="welcome-img">
+                <img src="img/palestrante.avif" alt="">
+            </div>
+            <div class="welcome-text">
+                <h2>O Encontro da Preparação com a Oportunidade:</h2>
+                <div class="text-welcome">
+                    <p>Confira um pouco da palestra</p>
+                    <p>realizada pelo nosso ex-aluno</p>
+                    <p>Brendow Mesquita!</p>
+                </div>
+                <button>Ver agora</button>
+            </div>
+        </div>
+        <button id="proximo"><i class="fa-solid fa-arrow-left fa-rotate-180" style="color: a-solid fa-arrow-left fa-rotate-260" style="color: #325597;"></i></button>
     </div>
 
 
@@ -51,6 +88,9 @@
     <div class="history">
 
     </div>
+    
+    
+<div class="titulocurso"><h1>Nossos Cursos</h1></div>
 
 
     <div class="courses">
@@ -67,30 +107,30 @@
     <hr>
 
     <div class="card">
-    <div class="cursos"><img src="img/curso tecnico.avif" alt=""></div>
+    <div class="cursos"><img src="img/curso livre.avif" alt=""></div>
     <div class="textos">
-        <h2>Cursos técnicos</h2>
-        <p>Diversos cursos com a finalidade de dispertar seu dom escondido e preparar-te para o mercado de trabalho</p>
+        <h2>Cursos Livres</h2>
+        <p>Nossos cursos livres oferecem capacitação rápida e prática, para acelerar sua inserção e destaque no mercado de trabalho.</p>
     </div>
     </div>
     </div>
 
     <div class="partedois">
     <div class="card">
-    <div class="cursos"><img src="img/curso tecnico.avif" alt=""></div>
+    <div class="cursos"><img src="img/curso de qualificação.avif" alt=""></div>
     <div class="textos">
-        <h2>Cursos técnicos</h2>
-        <p>Diversos cursos com a finalidade de dispertar seu dom escondido e preparar-te para o mercado de trabalho</p>
+        <h2>Cursos de Qualificação</h2>
+        <p>Oferecemos cursos  de qualificação, unindo conhecimento prático e comportamental. Para o mercado de trabalho.</p>
     </div>
     </div>
 
     <hr>
 
     <div class="card">
-    <div class="cursos"><img src="img/curso tecnico.avif" alt=""></div>
+    <div class="cursos"><img src="img/curso cedesp.avif" alt=""></div>
     <div class="textos">
-        <h2>Cursos técnicos</h2>
-        <p>Diversos cursos com a finalidade de dispertar seu dom escondido e preparar-te para o mercado de trabalho</p>
+        <h2>Cedesp</h2>
+        <p>O CEDESP capacita pessoas em vulnerabilidade social, unindo ensino técnico e social para inserção no mercado de trabalho.</p>
     </div>
     </div>
     </div>
@@ -99,17 +139,25 @@
 
 
 
-    <div class="gallery">
-        <div class="cont1">
-            <div class="ft"><img src="img/gallery/foto1.avif" alt=""></div>
-            <div class="ft"><img src="img/gallery/foto2.avif" alt=""></div>
-            <div class="ft"><img src="img/gallery/foto3.avif" alt=""></div>
-        </div>
+    <div class="gallery-content">
+        <h1>Galeria</h1>
+        <div class="gallery">
+            <div class="cont1">
+                <div class="ft"><img src="img/gallery/foto1.avif" alt=""></div>
+                <hr class="hori">
+                <div class="ft"><img src="img/gallery/foto2.avif" alt=""></div>
+                <hr class="hori">
+                <div class="ft"><img src="img/gallery/foto3.avif" alt=""></div>
+            </div>
+            <hr class="verti">
             <div class="cont2">
                 <div class="ft"><img src="img/gallery/foto4.avif" alt=""></div>
+                <hr class="hori">
                 <div class="ft"><img src="img/gallery/foto6.avif" alt=""></div>
+                <hr class="hori">
                 <div class="ft"><img src="img/gallery/foto7.avif" alt=""></div>
             </div>
+        </div>
     </div>
 
 
@@ -123,9 +171,19 @@
                 
 
                 <div class="freiBebe">
-                    <img  class="imgdofrei"   src="img/frei baby 1.png" alt="">
-                    <p>Frei Xavier Fornasiero, nascido em Milão, Itália, em 5 de agosto de 1930, dedicou sua vida à missão, à caridade e ao amor ao próximo. Em 1971, fundou o Instituto Nossa Senhora de Fátima, hoje conhecido como CEDESP Ave Maria ou “Escola do Frei”, na Zona Sul de São Paulo. Em 1994, criou a Escola Cristo Mestre, voltada para a formação de jovens para o mercado de trabalho.</p>
+                    <img  class="imgdofrei" src="img/frei baby 1.png" alt="">
+                    <p>Frei Xavier Fornasiero, nascido em Milão, Itália, em 5 de agosto de 1930, dedicou sua vida à missão, à 
+                        caridade e ao amor ao próximo. Em 1971, fundou o Instituto Nossa Senhora de Fátima, hoje conhecido como 
+                        CEDESP Ave Maria ou “Escola do Frei”, na Zona Sul de São Paulo. Em 1994, criou a Escola Cristo Mestre,
+                        voltada para a formação de jovens para o mercado de trabalho.</p>
                 </div>
+
+                <div class="freicachorrinho">
+                    <p> Para manter os projetos sociais e educacionais, o Instituto também contou com uma padaria e uma gráfica como 
+                        fontes de recursos. Seu legado de dedicação, perseverança e transformação social continua inspirando muitas pessoas até hoje </p>
+                    <img class="imgdofreidog" src="img/xavier co cachorrinho fofinho linfinho bonitinho menininho pequenininho 3.png" alt="">
+                </div>
+
 
             </div>
         
@@ -140,7 +198,27 @@
 
     
     <footer>
+        <div class="logo">
+            <img src="img/logo frei png.png" alt="logo frei">
+            <h1>INSTITUTO SOCIAL <br>NOSSA SENHORA DE FÁTIMA</h1>
+        </div>
 
+        <div class="contatos">
+        <img src="img/phone-solid.png" alt="">
+        <h1>Contatos</h1>
+        <p>(11) 3798-5037 - secretaria</p>
+        <p>(11) 96398-6252 - secretaria ( Whatsapp)</p>
+        <p>Email: secretaria@acaonsfatima.org.br</p>
+        <p>Instagram: @institutonsfatima</p>
+        <p>(11) 96398-6253 -  CEDESP Ave Maria</p>
+        <p>Instagram: @cedesp.avemaria</p>
+
+        </div>
+
+        
+        </div>
+    
     </footer>
+    <script src="index.js"></script>
 </body>
 </html>

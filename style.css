@@ -10,7 +10,8 @@
     --linear-azulescuro: #0B162A;
     --linear-azulmedio: #19315D;
     --linear-azulclaro: #264C90;
-    
+    --amarelo-contato:  #FFDC84;
+    --amarelo-contato: #FFB700;
 }
 
 
@@ -69,47 +70,167 @@ nav a:hover {
 
 .welcome {
     display: flex;
-    justify-content: center;
+    justify-content: space-around;
     align-items: center;
-    padding: 10em 0em;
+    padding: 10em 2em;
+    width: 100%;
+}
+
+#proximo, #anterior {
+    color: var(--linear-azulescuro);
+    border: none;
+    outline: none;
+    background-color: white;
+    border-radius: 10px;
+    font-size: 5em;
+    cursor: pointer;
 }
 
 .welcome-container {
     display: flex;
-    justify-content: space-between;
     align-items: center;
     width: 80%;
     height: auto;
+    border-radius: 17px;
+    background-image: linear-gradient(135deg, #264C90 50%, #19315D 81%, #0B162A 100%);
 }
 
 .welcome-img {
     width: 50%;
     padding: 0px;
-    height: auto;
+    height: 100;
 }
 
-.welcome-img img {
-    width: 100%;
-    height: auto;
-}
 
 .welcome-text {
-    height: 43.5em;
-    width: 65%;
+    flex: 1;
+    height: 49.8em;
+    width: 50%;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: space-around;
-    background-image: linear-gradient(to right, #264C90, #19315D 51%, #0B162A 100%);
 }
+
+.welcome-text h2 {
+    font-size: 4.5em;
+    font-family: Arial, Helvetica, sans-serif;
+    color: var(--amarelo);
+}
+
+.text-welcome p {
+    text-align: center;
+    color: white;
+    font-size: 2.5em;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.destaque {
+    color: var(--amarelo);
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 3.7em;
+}
+
+.primeiro {
+    display: flex;
+}
+
+.segundo, .terceiro {
+    display: none;
+}
+
+
+.segundo .welcome-text h2 {
+    font-size: 3.9em;
+    text-align: center;
+}
+
+.terceiro .welcome-text p {
+    font-size: 3.8em;
+}
+
+.terceiro .welcome-text h2 {
+    font-size: 3.5em;
+    text-align: center;
+}
+
+.segundo .welcome-text {
+    justify-content: center;
+    gap: 4.5em;
+    width: 50%;
+}
+
+.terceiro .welcome-text {
+    justify-content: center;
+    gap: 5em;
+    width: 50%;
+}
+
+.segundo button {
+    border: 1px solid #EABC32;
+    background-color: transparent;
+    border-radius: 10px;
+    padding: 10px;
+    color: white;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 3em;
+    cursor: pointer;
+}
+
+.terceiro button {
+    border: 1px solid #EABC32;
+    background-color: transparent;
+    border-radius: 10px;
+    padding: 10px;
+    color: white;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 3.5em;
+    cursor: pointer;
+}
+
+.segundo p {
+    font-size: 3.6em;
+}
+
+.segundo .welcome-img, .terceiro .welcome-img {
+    width: 50%;
+    padding: 0px;
+    height: 100;
+}
+
+.segundo .welcome-container, .terceiro .welcome-container {
+    display: flex;
+    align-items: center;
+    width: 80%;
+    height: auto;
+    border-radius: 17px;
+    background-image: linear-gradient(135deg, #264C90 50%, #19315D 81%, #0B162A 100%);
+}
+
+.segundo .welcome-img img {
+    width: 100%;
+    height:     ;
+}
+
 
 /* HISTORY */
 
 /* COURSES */
+.titulocurso h1{
+    display: flex;
+    justify-content: center;
+    font-size: 5em;
+    color: var(--amarelo);
+    text-shadow: 2px 2px 5px black;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
 .courses{
     display: flex;
     align-items: center;
     justify-content: space-around;
+    margin-top: 90px;
+    
 }
 
 .courses h1{
@@ -138,6 +259,7 @@ hr {
 
 .textos{
     margin-top: 50px;
+    padding-left: 10px;
 }
 
 .textos h2{
@@ -149,7 +271,7 @@ hr {
 .textos p{
     font-size: 2em;
     color: white;
-    margin-top: 20px;
+    margin-top: 20px; 
 }
 
 .parteum{
@@ -171,74 +293,138 @@ hr {
 
 /* GALLERY */
 .cont1{
-    
-    width: auto;
+    padding: 25px;
+    display: flex;
     height: auto;
     flex-direction: column;
-    
-    
+    margin: 90px;
+    gap: 50px;
+    margin-top: 10px;
 }
 .cont2{
-    
-    width: auto;
+    padding: 25px;
+    display: flex;
     height: auto;
     flex-direction: column;
     margin: auto;
+    margin-bottom: 10px;
+    gap: 50px;
+}
+
+.hori{
+    height: 5px;
+    width: 500px;
+    margin: auto;
+    background-color: #F5BA53;
+    border: none;
     
 }
 
-.ft img {
-    height: 200px;
-    width: 400px;
+.verti{
+    height: 108em;
+    width: 5px;
+    background-color: #F5BA53;
+    border: none;
+    margin: auto;
 }
 
-.cont2{
-    margin-top: 20px;
+.gallery-content{
+    margin: auto;
+}
+.ft img {
+    height: 280px;
+    width: 490px;
 }
 
 .gallery{
     display: flex;
-    margin: 10px;
-    
+    justify-content: center;
+    align-items: center;
 }
 
 /* FUNDADOR */
 
-.fundador{display:flex ;}
+.fundador{
+    display: flex;
+    justify-content: center;
+ margin-right: 20px;  
+}
 
 .conteinerdofundador{
     background-color: var(--azul-frei);
-    width: 100%;
-    height:60rem ;
+    width: 90%;
+    height:75rem ;
+    border-radius: 1em;
+    padding: 2em;
+    margin-right: 20px;
+    margin: auto;
 }
 
 .nossofundador{
     color: var(--amarelo);
-    font-size: 5em;
+    font-size: 5rem;
     text-align: center;
-}
-
-.imgdofrei{
-    width: 30em;
-    height: 40em ;
-    margin-top: 8em;
-}
-
-.hdoisfundador{
-    font-size: 2REm;
-    color: white;
 }
 
 .freiBebe {
     display: flex;
     justify-content: space-between;
     align-items: center;
+    gap: 4em;
 }
 
 .freiBebe p {
-    font-size: 4em;
+    font-size: 3em;
     color: white;
-    line-height: 1.3;
+    line-height: 1.1;
+    gap: 4em;
+}
+
+.imgdofrei{
+    width:30em;
+   height: 30em ;
+   margin-top: 4em; 
+   border-radius: 0.2em;
+ 
+}
+
+.freicachorrinho{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.freicachorrinho p{
+    font-size: 3.3em;
+    color: white;
+    line-height: 1.1;
+}
+
+.imgdofreidog{
+   width:30em;
+   height: 30em ;  
+   border-radius: 0.2em;
 }
 
 /* COMMENTS */
+
+/* FOOTER */
+footer{
+    margin-top: 50px;
+    background: radial-gradient(#FFDC84,#FFB700) ;
+    height: 100vh;
+    color: white;
+}
+
+.logo{
+    padding: 15px;
+}
+
+.contatos h1{
+    font-size: 3em;
+}
+.contatos p{
+    margin-top: 10px;
+    font-size: 2em;
+}
+
