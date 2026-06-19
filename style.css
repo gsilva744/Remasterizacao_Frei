@@ -1,7 +1,19 @@
+@import url('https://fonts.googleapis.com/css2?family=Libre+Franklin:ital,wght@0,100..900;1,100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Special+Gothic:wght@400..700&display=swap');
+
 * {
     padding: 0px;
     margin: 0px;
     box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+
+h1, button, h2, h2, a{
+    font-family: var(--titulo);
+}
+
+p{
+    font-family: var(--texto);
 }
 
 :root {
@@ -12,6 +24,9 @@
     --linear-azulclaro: #264C90;
     --amarelo-contato:  #FFDC84;
     --amarelo-contato: #FFB700;
+
+    --titulo: 'Libre Franklin', 'Arial';
+    --texto: 'Special Gothic', 'Arial';
 }
 
 
@@ -27,7 +42,7 @@ header {
     color: white;
     width: 100%;
     background-color: var(--azul-frei);
-    padding: 1.2em 2.6em;
+    padding: 0px 2.6em;
 }
 
 nav {
@@ -43,7 +58,7 @@ nav a {
     align-items:center; 
     font-size: 2.9em;
     text-shadow: 2px 2px 5px black;
-    font-family: Arial, Helvetica, sans-serif;
+    font-family: var(--texto);
     transition: transform 0.5s ease, color 0.3s ease;
 }
 
@@ -51,12 +66,12 @@ nav a {
     display: flex;
     align-items: center;
     gap: 10px;
-    width: 32%;
+    width: 29%;
 }
 
 .logo h1 {
     font-size: 3em;
-    font-family: Arial, Helvetica, sans-serif;
+    font-family: var(--titulo);
     text-shadow: 0px 4px 4px black;
 }
 
@@ -72,7 +87,7 @@ nav a:hover {
     display: flex;
     justify-content: space-around;
     align-items: center;
-    padding: 10em 2em;
+    padding: 7em 2em 5em 2em;
     width: 100%;
 }
 
@@ -84,6 +99,11 @@ nav a:hover {
     border-radius: 10px;
     font-size: 5em;
     cursor: pointer;
+    transition: color 0.2s ease;
+}
+
+#proximo:hover, #anterior:hover {
+    color: #F5BA53;
 }
 
 .welcome-container {
@@ -101,6 +121,11 @@ nav a:hover {
     height: 100;
 }
 
+.welcome-img img {
+    display: block;
+    margin: auto;
+}
+
 
 .welcome-text {
     flex: 1;
@@ -114,7 +139,7 @@ nav a:hover {
 
 .welcome-text h2 {
     font-size: 4.5em;
-    font-family: Arial, Helvetica, sans-serif;
+    font-family: var(--titulo);
     color: var(--amarelo);
 }
 
@@ -122,13 +147,17 @@ nav a:hover {
     text-align: center;
     color: white;
     font-size: 2.5em;
-    font-family: Arial, Helvetica, sans-serif;
+    font-family: var(--texto);
 }
 
 .destaque {
     color: var(--amarelo);
-    font-family: Arial, Helvetica, sans-serif;
+    font-family: var(--texto);
     font-size: 3.7em;
+}
+
+.arrow {
+    font-size: 2em;
 }
 
 .primeiro {
@@ -172,9 +201,10 @@ nav a:hover {
     border-radius: 10px;
     padding: 10px;
     color: white;
-    font-family: Arial, Helvetica, sans-serif;
+    font-family: var(--texto);
     font-size: 3em;
     cursor: pointer;
+    transition: background-color 0.4s ease, color 0.4s ease;
 }
 
 .terceiro button {
@@ -183,9 +213,15 @@ nav a:hover {
     border-radius: 10px;
     padding: 10px;
     color: white;
-    font-family: Arial, Helvetica, sans-serif;
+    font-family: var(--texto);
     font-size: 3.5em;
     cursor: pointer;
+    transition: background-color 0.4s ease, color 0.4s ease;
+}
+
+.segundo button:hover, .terceiro button:hover {
+    background-color: #EABC32;
+    color: #264C90;
 }
 
 .segundo p {
@@ -207,42 +243,135 @@ nav a:hover {
     background-image: linear-gradient(135deg, #264C90 50%, #19315D 81%, #0B162A 100%);
 }
 
-.segundo .welcome-img img {
+.segundo .welcome-img img, .terceiro .welcome-img img{
     width: 100%;
-    height:     ;
+    height: auto;
+    border-radius: 10px 0px 0px 10px;
 }
 
-
 /* HISTORY */
+
+.history {
+    display: flex;
+    background-image: linear-gradient(to left, #0B162A 0%, #19315D 0%, #264C90 49%, #19315D 100%, #0B162A 100%);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 2em;
+    width: 100%;
+}
+.history h2 {
+    font-size: 5em;
+    font-family: var(--titulo);
+    color: var(--amarelo);
+    padding-bottom: 1.5em;
+    text-shadow: 4px 4px 10px black;
+}
+
+.data {
+    width: 100%;
+    height: auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    flex-direction: column;
+    gap: 2em;
+}
+
+.data img {
+    width: 16em;
+}
+
+.dataUp {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 85%;
+}
+
+.cardData {
+    display: flex;
+    align-items: center;
+    width: 66em;
+    height: auto;
+    gap: 10px;
+}
+
+.cardData:nth-child(2), .cardData:nth-child(4){
+    justify-content: flex-end;
+}
+
+.cardText {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    width: 50%;
+    height: auto;
+    gap: 10px;
+}
+
+.cardText p {
+    color: white;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 4em;
+    text-align: center;
+}
+
+p.dado  {
+    font-size: 5em;
+}
+
+.cardData img {
+    width: 14em;
+    display: block;
+    margin: auto;
+}
+
+.cardImg {
+    height: auto;
+}
+
+.mid {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 8em;
+}
 
 /* COURSES */
 .titulocurso h1{
     display: flex;
     justify-content: center;
-    font-size: 5em;
+    font-size: 6em;
     color: var(--amarelo);
     text-shadow: 2px 2px 5px black;
     font-family: Arial, Helvetica, sans-serif;
+    padding-top: 1em;
+    text-shadow: 4px 4px 5px black;
 }
 
 .courses{
     display: flex;
     align-items: center;
-    justify-content: space-around;
-    margin-top: 90px;
-    
+    margin-top: 40px;
 }
 
 .courses h1{
     font-size: 3.5em;
-    font-family: Arial, Helvetica, sans-serif;
+    font-family: var(--texto);
 }
 
 .card{
     background: linear-gradient(to left, #264C90, #122444);
-    height: 50vh;
-    width: 25vw;
+    height: 50em;
+    width: 45%;
     border-radius: 20px;
+    transition: transform 0.4s ease;
+    cursor: pointer;
+}
+
+.card:hover {
+    transform: scale(1.05);
 }
 
 hr {
@@ -250,9 +379,14 @@ hr {
     background-color: #EABC32;
 }
 
+.cursos {
+    height: 50%;
+    width: 100%;
+}
+
 .cursos img{
-    width: 25vw;
-    height: 25vh;
+    width: 100%;
+    height: 100%;
     border-top-left-radius: 10px;
     border-top-right-radius: 10px;
 }
@@ -263,13 +397,14 @@ hr {
 }
 
 .textos h2{
-    font-size: 2em;
+    font-size: 3em;
     color: white;
     text-align: justify;
 }
 
 .textos p{
     font-size: 2em;
+    line-height: 1.5;
     color: white;
     margin-top: 20px; 
 }
@@ -278,17 +413,15 @@ hr {
     display: flex;
     align-items: center;
     flex-direction: column;
-    gap: 3em;
     border-right: 1px solid black;
-    width: 50%;
+    gap: 25px;
 }
 
 .partedois{
-     display: flex;
+    display: flex;
     flex-direction: column;
     align-items: center;
-    gap: 3em;
-    width: 50%;
+    gap: 25px;
 }
 
 /* GALLERY */
@@ -297,10 +430,11 @@ hr {
     display: flex;
     height: auto;
     flex-direction: column;
-    margin: 90px;
+    margin: 0px 0px  10px 90px;
     gap: 50px;
     margin-top: 10px;
 }
+
 .cont2{
     padding: 25px;
     display: flex;
@@ -309,6 +443,7 @@ hr {
     margin: auto;
     margin-bottom: 10px;
     gap: 50px;
+    margin: 0px 90px 10px 0px;
 }
 
 .hori{
@@ -328,9 +463,14 @@ hr {
     margin: auto;
 }
 
-.gallery-content{
-    margin: auto;
+.gallery-content h1 {
+    font-size: 7em;
+    text-align: center;
+    padding: 0.7em 0em 0em 0em;
+    color: #FFB700;
+    text-shadow: 4px 4px 10px black;
 }
+
 .ft img {
     height: 280px;
     width: 490px;
@@ -342,12 +482,21 @@ hr {
     align-items: center;
 }
 
+.vemFrei {
+    background-image: url(img/vemProFrei.png);
+    width: 100%;    
+    margin-top: 6em;
+    height: 18em;
+    background-size: cover;
+    background-position: center center; 
+}
+
 /* FUNDADOR */
 
 .fundador{
     display: flex;
     justify-content: center;
- margin-right: 20px;  
+    margin-right: 20px;  
 }
 
 .conteinerdofundador{
@@ -407,24 +556,185 @@ hr {
 }
 
 /* COMMENTS */
+.comments{
+    margin-top: 100px;
+}
+
+.comments h1{
+    justify-content: center;
+    font-size: 3em;
+    text-shadow: 2px 2px 5px black;
+    font-family: Arial, Helvetica, sans-serif;
+    color: var(--amarelo);
+    display: flex;
+    margin-left: 10px;
+}
+
+.comments p{
+    font-size: 3em;
+    float: left;
+    margin-left: 330px;
+    margin-top: -110px;
+    color: #13397C;
+    font-weight: bold;
+}
+
+.bruno img{
+    padding-left: 30px;
+    margin-top: 10px;
+}
+
+.comments hr{
+    width: 1575px;
+    height: 0.5vh;
+    border: none;
+    margin-top: 30px;
+}
+
+.testo p{
+    margin-left: 330px;
+    margin-top: -347px;
+    color: #122444;
+ }
+
+
 
 /* FOOTER */
 footer{
     margin-top: 50px;
     background: radial-gradient(#FFDC84,#FFB700) ;
-    height: 100vh;
+    height: 68vh;
     color: white;
 }
 
 .logo{
-    padding: 15px;
+    margin-top: -29px;
+    margin-bottom: 20px;
 }
 
-.contatos h1{
+.logo h1{
     font-size: 3em;
+    text-shadow: 2px 2px 5px black;
+    font-family: Arial, Helvetica, sans-serif;
+    color: white;
+    display: flex;
+}
+
+i{
+   font-size: 5em;
+}
+
+
+.fota i {
+    margin-top: 0.3em;
+    margin-left: 0.4em;
+}
+
+.contatos, .ali{
+    display: flex;
+    flex-direction: row;
+    height: auto;
+    width: 4em;
+    gap: 15px;
+}
+
+
+
+.fotinha h1{
+    font-size: 3em;
+    text-shadow: 2px 2px 5px black;
+    font-family: Arial, Helvetica, sans-serif;
+    color: white;
+    display: flex;
 }
 .contatos p{
     margin-top: 10px;
+    margin-left: 20px;
     font-size: 2em;
+    color: #19315D;
+    display: flex;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: bold;
 }
 
+.pedidos p{
+    color: #19315D;
+    display: flex;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: bold;
+    font-size: 2em;
+    margin-top: 10px;
+    width: 40em;
+    margin-left: 19px;
+}
+
+.pedidos h1{
+    font-size: 3em;
+    text-shadow: 2px 2px 5px black;
+    font-family: Arial, Helvetica, sans-serif;
+    color: white;
+    display: flex;
+    margin-left: 20px;
+}
+
+.endereco h1{
+    margin-top: 10px;
+     font-size: 3em;
+    text-shadow: 2px 2px 5px black;
+    font-family: Arial, Helvetica, sans-serif;
+    color: white;
+    display: flex;
+    margin-left: 20px;
+}
+
+.endereco p{
+    color: #19315D;
+    display: flex;
+    margin-left: 20px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: bold;
+    font-size: 2em;
+    margin-top: 10px;
+}
+
+.parceiros h1{
+    margin-top: 10px;
+    font-size: 3em;
+    text-shadow: 2px 2px 5px black;
+    font-family: Arial, Helvetica, sans-serif;
+    color: white;
+    display: flex;
+}
+
+.textCont p {
+    width: 20em;
+}
+
+.footer-section{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.leftSide, .rightSide {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    justify-content: space-between;
+    height: 40em;
+}
+
+.patrocinios {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-right: 20px;
+}
+
+.patrocinio {
+    width: 13em;
+    padding: 10px;
+    height: 8em;
+    background-color: white;
+    border-radius: 10px;
+}
