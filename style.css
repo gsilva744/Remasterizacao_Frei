@@ -42,7 +42,7 @@ header {
     color: white;
     width: 100%;
     background-color: var(--azul-frei);
-    padding: 0px 2.6em;
+    padding: 10px 2.6em;
 }
 
 nav {
@@ -62,14 +62,15 @@ nav a {
     transition: transform 0.5s ease, color 0.3s ease;
 }
 
-.logo{
+.logo-inicio {
     display: flex;
     align-items: center;
     gap: 10px;
     width: 29%;
+    height: auto;
 }
 
-.logo h1 {
+.logo-inicio h1 {
     font-size: 3em;
     font-family: var(--titulo);
     text-shadow: 0px 4px 4px black;
@@ -90,8 +91,8 @@ nav a:hover {
     padding: 7em 2em 5em 2em;
     width: 100%;
 }
-
 #proximo, #anterior {
+
     color: var(--linear-azulescuro);
     border: none;
     outline: none;
@@ -117,15 +118,14 @@ nav a:hover {
 
 .welcome-img {
     width: 50%;
-    padding: 0px;
-    height: 100;
+    height: 100%;
 }
 
 .welcome-img img {
     display: block;
     margin: auto;
+    width: 100%;
 }
-
 
 .welcome-text {
     flex: 1;
@@ -167,7 +167,6 @@ nav a:hover {
 .segundo, .terceiro {
     display: none;
 }
-
 
 .segundo .welcome-text h2 {
     font-size: 3.9em;
@@ -257,14 +256,15 @@ nav a:hover {
     display: flex;
     flex-direction: column;
     align-items: center;
-    padding: 2em;
+    padding: 3em 0px;
     width: 100%;
 }
+
 .history h2 {
     font-size: 5em;
     font-family: var(--titulo);
     color: var(--amarelo);
-    padding-bottom: 1.5em;
+    padding-bottom: 0.6em;
     text-shadow: 4px 4px 10px black;
 }
 
@@ -276,10 +276,15 @@ nav a:hover {
     justify-content: space-around;
     flex-direction: column;
     gap: 2em;
+    position: relative;
 }
 
-.data img {
+.mid img {
     width: 16em;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
 }
 
 .dataUp {
@@ -325,6 +330,7 @@ p.dado  {
     width: 14em;
     display: block;
     margin: auto;
+    border-radius: 5px;
 }
 
 .cardImg {
@@ -334,8 +340,11 @@ p.dado  {
 .mid {
     display: flex;
     align-items: center;
-    justify-content: space-between;
-    gap: 8em;
+    justify-content: center;
+    gap: 40em;
+    width: 100%;
+    margin-top: 2em;
+    margin-bottom: 2em;
 }
 
 /* COURSES */
@@ -354,17 +363,19 @@ p.dado  {
     display: flex;
     align-items: center;
     margin-top: 40px;
+    justify-content: center;
+    gap: 15em;
 }
 
 .courses h1{
-    font-size: 3.5em;
+    font-size: 3em;
     font-family: var(--texto);
 }
 
 .card{
     background: linear-gradient(to left, #264C90, #122444);
-    height: 50em;
-    width: 45%;
+    height: 70em;
+    width: 50em;
     border-radius: 20px;
     transition: transform 0.4s ease;
     cursor: pointer;
@@ -392,36 +403,40 @@ hr {
 }
 
 .textos{
-    margin-top: 50px;
+    margin-top: 15px;
     padding-left: 10px;
 }
 
 .textos h2{
-    font-size: 3em;
+    font-size: 4em;
     color: white;
-    text-align: justify;
 }
 
 .textos p{
-    font-size: 2em;
-    line-height: 1.5;
+    font-size: 2.3em;
+    line-height: 1.8;
+    width: 100%;
     color: white;
-    margin-top: 20px; 
+    margin-top: 20px;
 }
 
 .parteum{
     display: flex;
     align-items: center;
     flex-direction: column;
-    border-right: 1px solid black;
-    gap: 25px;
+    gap: 8em;
+}
+
+.horizontalLine hr {
+    width: 1px;
+    height: 145em;
 }
 
 .partedois{
     display: flex;
     flex-direction: column;
     align-items: center;
-    gap: 25px;
+    gap: 8em;
 }
 
 /* GALLERY */
@@ -486,7 +501,7 @@ hr {
     background-image: url(img/vemProFrei.png);
     width: 100%;    
     margin-top: 6em;
-    height: 18em;
+    height: 15em;
     background-size: cover;
     background-position: center center; 
 }
@@ -511,6 +526,7 @@ hr {
 
 .nossofundador{
     color: var(--amarelo);
+    text-shadow: 4px 4px 6px black;
     font-size: 5rem;
     text-align: center;
 }
@@ -525,16 +541,15 @@ hr {
 .freiBebe p {
     font-size: 3em;
     color: white;
-    line-height: 1.1;
+    line-height: 1.2;
     gap: 4em;
 }
 
 .imgdofrei{
     width:30em;
-   height: 30em ;
-   margin-top: 4em; 
-   border-radius: 0.2em;
- 
+    height: 30em;
+    margin-top: 4em; 
+    border-radius: 10px;
 }
 
 .freicachorrinho{
@@ -546,13 +561,13 @@ hr {
 .freicachorrinho p{
     font-size: 3.3em;
     color: white;
-    line-height: 1.1;
+    line-height: 1.2;
 }
 
 .imgdofreidog{
    width:30em;
    height: 30em ;  
-   border-radius: 0.2em;
+   border-radius: 10px;
 }
 
 /* COMMENTS */
@@ -562,7 +577,7 @@ hr {
 
 .comments h1{
     justify-content: center;
-    font-size: 3em;
+    font-size: 8em;
     text-shadow: 2px 2px 5px black;
     font-family: Arial, Helvetica, sans-serif;
     color: var(--amarelo);
@@ -577,6 +592,8 @@ hr {
     margin-top: -110px;
     color: #13397C;
     font-weight: bold;
+    width: 74%;
+    text-align: justify;
 }
 
 .bruno img{
@@ -602,28 +619,30 @@ hr {
 /* FOOTER */
 footer{
     margin-top: 50px;
-    background: radial-gradient(#FFDC84,#FFB700) ;
-    height: 68vh;
+    background: radial-gradient(#FFDC84,#FFB700);
+    height: 60em;
     color: white;
 }
 
-.logo{
-    margin-top: -29px;
-    margin-bottom: 20px;
-}
-
-.logo h1{
-    font-size: 3em;
-    text-shadow: 2px 2px 5px black;
-    font-family: Arial, Helvetica, sans-serif;
-    color: white;
+.logo {
     display: flex;
+    align-items: center;
+    gap: 10px;
+    width: 29%;
+    height: auto;
+    padding: 20px 0px 20px 0px;
+}
+
+.logo h1 {
+    font-size: 3em;
+    font-family: var(--titulo);
+    text-shadow: 0px 4px 4px black;
+    color: white;
 }
 
 i{
    font-size: 5em;
 }
-
 
 .fota i {
     margin-top: 0.3em;
@@ -638,8 +657,6 @@ i{
     gap: 15px;
 }
 
-
-
 .fotinha h1{
     font-size: 3em;
     text-shadow: 2px 2px 5px black;
@@ -647,6 +664,7 @@ i{
     color: white;
     display: flex;
 }
+
 .contatos p{
     margin-top: 10px;
     margin-left: 20px;
